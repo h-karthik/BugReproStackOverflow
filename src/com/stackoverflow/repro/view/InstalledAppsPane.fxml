@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="263.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stackoverflow.repro.controller.AppController">
+   <children>
+      <StackPane fx:id="stackpaneapps" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <BorderPane fx:id="progresspane" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ProgressIndicator fx:id="progress" maxHeight="100.0" maxWidth="100.0" prefHeight="68.0" prefWidth="77.0" />
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="profilingpane" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ProgressIndicator fx:id="stopProfInd" />
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
