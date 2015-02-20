@@ -19,13 +19,12 @@ public class Main extends Application {
     }
 
     private Stage primaryStage;
-    private BorderPane rootLayout;
+    private AnchorPane rootLayout;
     private AppIconsTask loadIconsTask;
     @Override
     public void start(Stage stage) throws Exception {
 
         this.primaryStage = stage;
-        initRootLayout();
         showInstalledApps();
     }
 
@@ -38,10 +37,7 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/InstalledAppsPane.fxml"));
 
-            AnchorPane appsPane = (AnchorPane) loader.load();
-
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(appsPane);
+            rootLayout = (AnchorPane) loader.load();
 
             // Give the controller access to the main app.
             AppController controller = loader.getController();
@@ -52,29 +48,14 @@ public class Main extends Application {
 
             new Thread(loadIconsTask).start();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-    /**
-     * Initializes the root layout.
-     */
-    public void initRootLayout() {
-        try {
-            // Load root layout from fxml file.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
-            rootLayout = (BorderPane) loader.load();
-
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout, 600, 400);
 
             primaryStage.setTitle("Hello");
             primaryStage.setScene(scene);
             primaryStage.show();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
