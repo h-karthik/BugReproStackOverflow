@@ -9,7 +9,6 @@ import java.util.ResourceBundle;
 import com.stackoverflow.repro.Main;
 import com.stackoverflow.repro.tasks.AppIconsTask;
 import com.stackoverflow.repro.tasks.ProfilingTask;
-import com.stackoverflow.repro.utils.MyVbox;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,11 +47,9 @@ public class AppController
 
     private ProfilingTask prTask;
 
-    private Queue<MyVbox> clickedAppQueue;
 
     @Override // This method is called by the FXMLLoader when initialization is complete
     public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
-        clickedAppQueue = new LinkedList<MyVbox>();
     }
     /**
      * Is called by the main application to give a reference back to itself.
