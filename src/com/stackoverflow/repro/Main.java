@@ -1,7 +1,6 @@
 package com.stackoverflow.repro;
 
 import com.stackoverflow.repro.controller.AppController;
-import com.stackoverflow.repro.model.App;
 import com.stackoverflow.repro.tasks.AppIconsTask;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -21,7 +20,6 @@ public class Main extends Application {
 
     private Stage primaryStage;
     private BorderPane rootLayout;
-    private ObservableList<App> installedApps;
     private AppIconsTask loadIconsTask;
     @Override
     public void start(Stage stage) throws Exception {
@@ -81,15 +79,4 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-
-
-    /**
-     * Returns the data as an observable list of apps.
-     * @return
-     */
-    public ObservableList<App> getApps() {
-        return installedApps;
-    }
-
-
 }

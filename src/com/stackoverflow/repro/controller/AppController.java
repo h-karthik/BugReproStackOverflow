@@ -2,14 +2,11 @@ package com.stackoverflow.repro.controller;
 
 
 import java.net.URL;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.ResourceBundle;
 
 import com.stackoverflow.repro.Main;
 import com.stackoverflow.repro.tasks.AppIconsTask;
 import com.stackoverflow.repro.tasks.ProfilingTask;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -34,11 +31,6 @@ public class AppController
 
     @FXML
     private BorderPane profilingpane;
-
-    @FXML
-    private Label devicename;
-
-    private ObservableValue<Number> profProperty;
 
     // Reference to the main application.
     private Main mainApp;
